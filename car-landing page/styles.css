@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+   --primary-color: #37617a;
+  --primary-color-dark: #0d1a20;
+  --secondary-color: #fb923c;
+  --white: #ffffff; 
+  background-image: linear-gradient(to right bottom, #0e0d0d, #222a2e);
+
+}
+.dark-theme{
+  --primary-color: #faf7f7;
+  --primary-color-dark: #f1f3f5;
+  --secondary-color: #fb923c;
+  --white: #0f0f0f;
+  background-image: linear-gradient(to right bottom, #f7eeee, #636464);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+body {
+  font-family: "Poppins", sans-serif;
+ 
+}
+.container {
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.nav {
+  padding-top: -30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size:1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.links div {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links div:hover {
+  color: var(--secondary-color);
+}
+
+.links div span {
+  font-size: 1.2rem;
+}
+
+/* .links #shopping__cart {
+  height: 30px;
+  width: px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  font-size: 1.4rem;
+  color: var(--primary-color-dark);
+  background-color: var(--white); */
+  
+
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  animation: shoe-animation 3s infinite;
+  overflow: hidden;
+  
+}
+
+.image img {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  margin-left: auto;
+
+}
+
+@keyframes shoe-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.header {
+  position: absolute;
+  top: 3rem;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.header p:hover {
+  color: var(--secondary-color);
+}
+
+.featured__item {
+  position: absolute;
+  transform: rotate(10deg);
+  position: absolute;
+  top: 40;
+  left:13%;
+  transform: translateX(-50%);
+
+}
+.featured__item  {
+  animation: 3s slide-right;
+  
+}
+
+@keyframes slide-right {
+   from {
+      margin-left: -500px;
+   }
+
+   to {
+      margin-left: 0%;
+   }
+  }
+.featured__item h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: var(--white);
+}
+
+.featured__item p {
+  color: var(--white);
+  font: weight 30px;
+
+}
+.featured__item h5:hover {
+  color: var(--secondary-color);}
+.featured__item h5 {
+    text-align: center;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+@media (width < 640px) {
+  .links div:not(.shopping__cart) {
+    display: none;
+  }
+
+  .header {
+    top: 1rem;
+  }
+
+  .featured__item {
+    left: -5rem;
+  }
+
+  .contact {
+    right: -4rem;
+  }
+}
+.thumb{
+  position: absolute;
+  left: 65%;
+  bottom:-10px;
+  transform: translateX(-20%);
+  display: flex;
+   
+}
+.thumb li
+{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor:pointer;
+}
+.thumb li:hover{
+  transform: translateY(-10px);
+}
+.thumb li img{
+    max-width: 50px;
+   
+}
+.logo1{ 
+  height: 5rem;
+}
+span{
+  
+    font-family: 'Futura', sans-serif;
+    font-weight:bold;
+    color: #8a8585;  
+  
+}
+.sci{
+  position: absolute;
+  top :50%;
+  transform: translateY(-50deg);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sci li{
+  list-style:none;
+
+}
+.sci li a{
+  display: inline-block;
+  margin:5px 0;
+  transform: scale(0.6);
+}
+.social-icons {
+  position: absolute;
+  bottom: 50px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #424141;
+  border-radius: 50%;
+  margin-right: 22px;
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid #fff;
+  outline: 2px solid black;
+  transition: .1s;
+}
+
+.social-icons a:hover {
+  color:rgb(255, 255, 255);
+}
+.social-icons a i {
+  color: #fff;
+}
